@@ -1,0 +1,21 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Website_Generator{
+
+ +{static}input: Scanner
+ +{static}htmlFile: FileWriter
+
+
+ +main(arg: String[]): void
+ +getWebsiteData() : ArrayList<String>
+ +pathMaker (websiteData: ArrayList<String> : void
+ +folderCreator(sourceDirectory: String , folderName: String): File
+ +folderCreator(sourceDirectory: String , folderName: String, subFolderName: String): File
+ +printFileCreationResult(folder: File): void
+ +printhtmlCreationResult(outputFile: FileWriter, path: String) : void
+ +htmlMaker(outputFile: FileWriter, websiteData: ArrayList<String>, path String) : FileWriter
+
+}
+
+@enduml

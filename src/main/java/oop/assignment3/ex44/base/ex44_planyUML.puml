@@ -1,0 +1,36 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+
+class Product_Search {
++{static} output: Scanner
+
+
+ + main(arg: String[]): void
+ + productArrayMaker(input: File) : List<Products>
+ + getProductName(): String
+ + productFinder(products: List<Products> , searchKey: String) : boolean
+ + printProductInfo(products: List<Products> , searchKey: String, productExists boolean): void
+}
+
+class Products{
+ name: String;
+ price: Double;
+ quantity: Integer;
+
+ +Products(name: String, price: Double, quantity: Integer) : void
+ +toString() : String
+ +setName(name: String) : void
+ +setPrice(price: Double) : void
+ +setQuantity(quantity: Integer): void
+ +getName(): String
+ +getPrice(): Double
+ +getQuantity(): Integer
+
+}
+
+Products <..Product_Search : uses
+
+
+
+@enduml

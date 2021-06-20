@@ -1,0 +1,22 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Word_Finder{
+
+ +{static}readFile: BufferedReader
+ +{static}writeFile: BufferedWriter
+ +{static}oldWord: String
+ +{static}newWord: String
+ +{static} fileLines :ArrayList<String>
+
+ +  main(arg: String[]): void
+ + fileRead(inout inputFile: BufferedReader, fileName: String): ArrayList<String>
+ + fileWriter (inout outputFile: BufferedWriter, sortedString: ArrayList<String> , String fileName): BufferedWriter
+ + createFileName(newFileName: String): String
+ + wordReplacer(fileLines: ArrayList<String> , oldWord: String, newWord String): ArrayList<String>
+
+}
+
+
+
+@enduml

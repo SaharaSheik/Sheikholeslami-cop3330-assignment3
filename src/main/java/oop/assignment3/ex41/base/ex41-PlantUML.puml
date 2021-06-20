@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Name_Sorter{
+
+ +{static}readFile: BufferedReader
+ +{static}writeFile: BufferedWriter
+
+ +  main(arg: String[]): void
+ + fileRead(inout inputFile: BufferedReader, fileName: String): ArrayList<String>
+ + fileWriter (inout outputFile: BufferedWriter, sortedString: ArrayList<String> , String fileName): BufferedWriter
+
+
+}
+
+@enduml

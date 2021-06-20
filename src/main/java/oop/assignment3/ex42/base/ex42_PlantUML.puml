@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Parsing_Data_File{
+
+ +{static} readFile: BufferedReader
+ +{static}writeFile: BufferedWriter
+
+ +  main(arg: String[]): void
+ + fileRead(inout inputFile: BufferedReader, fileName: String): ArrayList<String>
+ + fileWriter (inout outputFile: BufferedWriter, sortedString: ArrayList<String> , String fileName): BufferedWriter
+
+
+}
+
+
+@enduml

@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Word_Finder{
+
+ +{static}readFile: BufferedReader
+
+
+ + main(arg: String[]): void
+ + fileRead(inout inputFile: BufferedReader, fileName: String): ArrayList<String>
+ + wordFrequencyMapCreator(fileContent : ArrayList<String> ) : Map <String, Integer>
+ + printHistogram(sortedMap : SortedSet<Map.Entry<String ,Integer>> ) : void
+ + sortMapsByValue(map: Map<K,V>) : <K,V extends Comparable<? super V>> SortedSet<Map.Entry<K,V>>
+
+}
+
+class fileReader_WordbyWord {
+
+ +{static} fileReaderWord(inputFile BufferedReader, fileName String): ArrayList<String>
+
+
+}
+@enduml
